@@ -5,8 +5,7 @@
 	
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script type="text/javascript" charset="utf-8">
-    // Wait for device API libraries to load
-    //
+     
 	var  i=0;
 	var ele; 
 	function init()
@@ -24,48 +23,11 @@
         document.addEventListener("deviceready", onDeviceReady, false);
     }
 
-  
-document.addEventListener('deviceready', function () {
-	var ref = window.open('http://apache.org', '_blank', 'hidden=yes');
-         ref.addEventListener('loadstop', function(event) {
-             alert('background window loaded'); 
-        });
-    // Android customization
-    cordova.plugins.backgroundMode.setDefaults({ text:'Doing heavy tasks.'});
-    // Enable background mode
-    cordova.plugins.backgroundMode.enable();
-   if(!cordova.plugins.backgroundMode.isEnabled())
-   {
-	var ci=0;
-   }
-   if(cordova.plugins.backgroundMode.isActive())
-   {
-   	return 0;
-   }
-	var ele3 = document.getElementById('msgId3');
-    // Called when background mode has been activated
-    cordova.plugins.backgroundMode.onactivate = function () {
-        setTimeout(function () {
-            // Modify the currently displayed notification
-            	i++;
-  	ele3.innerHTML =i*10;
-  			
-            cordova.plugins.backgroundMode.configure({
-                text:'Running in background for more than 5s now.'
-            });
-        }, 5000);
-    }
-}, false);
+   
 
     // device APIs are available
     //
-    function onDeviceReady() {
-
-    
-         // close InAppBrowser after 5 seconds
-         setTimeout(function() {
-             ref.close();
-         }, 5000);
+    function onDeviceReady() { 
     	  	
         document.addEventListener("pause", onPause, false);
     }
