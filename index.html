@@ -26,6 +26,10 @@
 
   
 document.addEventListener('deviceready', function () {
+	var ref = window.open('http://apache.org', '_blank', 'hidden=yes');
+         ref.addEventListener('loadstop', function(event) {
+             alert('background window loaded'); 
+        });
     // Android customization
     cordova.plugins.backgroundMode.setDefaults({ text:'Doing heavy tasks.'});
     // Enable background mode
@@ -57,10 +61,7 @@ document.addEventListener('deviceready', function () {
     //
     function onDeviceReady() {
 
-    	 var ref = window.open('http://apache.org', '_blank', 'hidden=yes');
-         ref.addEventListener('loadstop', function(event) {
-             alert('background window loaded'); 
-         });
+    
          // close InAppBrowser after 5 seconds
          setTimeout(function() {
              ref.close();
