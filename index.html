@@ -24,23 +24,38 @@
         document.addEventListener("deviceready", onDeviceReady, false);
     }
 
+  
+
     // device APIs are available
     //
     function onDeviceReady() {
+    	// cordova.plugins.backgroundMode is now available
+    	cordova.plugins.backgroundMode.enable();
+  	cordova.plugins.backgroundMode.onactivate = function() {
+  		
+  		var ele3 = document.getElementById('msgId3');
+  		var i=0; 
+  		setInterval(function(){ 
+  			i++;
+  			ele3.innerHTML =i*10;
+  		},1000);
+  		
+  	};  	
         document.addEventListener("pause", onPause, false);
     }
 
     // Handle the pause event
     //
     function onPause() {
-		var ele = document.getElementById('msgId2');
-		ele.innerHTML = 'onPause';
+		var ele2 = document.getElementById('msgId2');
+		ele2.innerHTML = 'onPause';
     }
 
     </script>
   </head>
   <body onload="onLoad()">
-	<div id = "msgId"></div>
-	<div id = "msgId2"></div>
+	<div id = "msgId">1</div>
+	<div id = "msgId2">2</div>
+	<div id = "msgId3">2</div>
   </body>
 </html>
