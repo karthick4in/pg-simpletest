@@ -30,7 +30,14 @@ document.addEventListener('deviceready', function () {
     cordova.plugins.backgroundMode.setDefaults({ text:'Doing heavy tasks.'});
     // Enable background mode
     cordova.plugins.backgroundMode.enable();
+   if(!cordova.plugins.backgroundMode.isEnabled())
+   {
 	var ci=0;
+   }
+   if(cordova.plugins.backgroundMode.isActive())
+   {
+   	return 0;
+   }
 	var ele3 = document.getElementById('msgId3');
     // Called when background mode has been activated
     cordova.plugins.backgroundMode.onactivate = function () {
