@@ -25,19 +25,39 @@
     }
 
   
+document.addEventListener('deviceready', function () {
+    // Android customization
+    cordova.plugins.backgroundMode.setDefaults({ text:'Doing heavy tasks.'});
+    // Enable background mode
+    cordova.plugins.backgroundMode.enable();
+	var ci=0;
+	var ele3 = document.getElementById('msgId3');
+    // Called when background mode has been activated
+    cordova.plugins.backgroundMode.onactivate = function () {
+        setTimeout(function () {
+            // Modify the currently displayed notification
+            	i++;
+  	ele3.innerHTML =i*10;
+  			
+            cordova.plugins.backgroundMode.configure({
+                text:'Running in background for more than 5s now.'
+            });
+        }, 5000);
+    }
+}, false);
 
     // device APIs are available
     //
     function onDeviceReady() {
     	// cordova.plugins.backgroundMode is now available
     	cordova.plugins.backgroundMode.enable();
+    	
   	cordova.plugins.backgroundMode.onactivate = function() {
   		
-  		var ele3 = document.getElementById('msgId3');
-  		var i=0; 
+  		
+  		
   		setInterval(function(){ 
-  			i++;
-  			ele3.innerHTML =i*10;
+  		
   		},1000);
   		
   	};  	
