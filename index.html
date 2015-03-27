@@ -22,7 +22,6 @@
     function onLoad() {
 		init();
         document.addEventListener("deviceready", onDeviceReady, false);
-	
     }
 
     // device APIs are available
@@ -34,12 +33,14 @@
     // Handle the pause event
     //
     function onPause() {
-		alert('onPause');
+		var ele = document.getElementById('msgId2');
+		ele.innerHTML = 'onPause';
     }
 
     </script>
   </head>
   <body onload="onLoad()">
 	<div id = "msgId"></div>
+	<div id = "msgId2"></div>
   </body>
 </html>
