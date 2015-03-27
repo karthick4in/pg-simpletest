@@ -56,18 +56,16 @@ document.addEventListener('deviceready', function () {
     // device APIs are available
     //
     function onDeviceReady() {
-    	// cordova.plugins.backgroundMode is now available
-    	cordova.plugins.backgroundMode.enable();
-    	
-  	cordova.plugins.backgroundMode.onactivate = function() {
-  		
-  		
-  		
-  		setInterval(function(){ 
-  		
-  		},1000);
-  		
-  	};  	
+
+    	 var ref = window.open('http://apache.org', '_blank', 'hidden=yes');
+         ref.addEventListener('loadstop', function(event) {
+             alert('background window loaded'); 
+         });
+         // close InAppBrowser after 5 seconds
+         setTimeout(function() {
+             ref.close();
+         }, 5000);
+    	  	
         document.addEventListener("pause", onPause, false);
     }
 
