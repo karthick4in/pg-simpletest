@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pause Example</title>
+	
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+    // Wait for device API libraries to load
+    //
+	var  i=0;
+	var ele; 
+	function init()
+	{
+		i++;
+		ele = document.getElementById('msgId');
+		setInterval(function(){ 
+		  ele.innerHTML = i++;
+		},500 )
+	};
+	
+	
+    function onLoad() {
+		init();
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        document.addEventListener("pause", onPause, false);
+    }
+
+    // Handle the pause event
+    //
+    function onPause() {
+		var ele2 = document.getElementById('msgId2');
+		ele2.innerHTML = 'onPause';
+    }
+
+    </script>
+  </head>
+  <body onload="onLoad()">
+	<div id = "msgId"></div>
+	<div id = "msgId2"></div>
+  </body>
+</html>
