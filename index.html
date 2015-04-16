@@ -1,19 +1,28 @@
 <!DOCTYPE HTML>
 <html>
-<<<<<<< HEAD
     <head>
         <title>com.PhoneGap.c2dm</title>
     </head>
-    <body>    
-        <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
+    <body>
+
+/*
+NOTE:
+    This demo uses these plugins:
+        Cordova Device Plugin: http://plugins.cordova.io/#/package/org.apache.cordova.device
+        Cordova Media Plugin: http://plugins.cordova.io/#/package/org.apache.cordova.media
+
+    To add them via the CLI:
+        $ cordova plugin add org.apache.cordova.device
+        $ cordova plugin add org.apache.cordova.media
+*/       
+        <!--<script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>-->
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8" src="jquery_1.5.2.min.js"></script>
         <script type="text/javascript" src="PushNotification.js"></script>
-		<script src="http://192.168.1.5:8080/target/target-script-min.js#anonymous"></script>
-        
+        <script src="http://192.168.1.5:8080/target/target-script-min.js#anonymous"></script>
         <script type="text/javascript">
             var pushNotification;
-            
+            var Jan_REGID;
             function onDeviceReady() {
                 $("#app-status-ul").append('<li>deviceready event received</li>');
                 
@@ -73,7 +82,6 @@
             }
             
             // handle GCM notifications for Android
-			var Jan_REGID;
             function onNotification(e) {
                 $("#app-status-ul").append('<li>EVENT -> RECEIVED:' + e.event + '</li>');
                 
@@ -156,40 +164,4 @@
 			</div>
 		</div>
     </body>
- 
-     
-	var  i=0;
-	var ele; 
-	function init()
-	{
-		i++;
-		setInterval(function(){ 
-		  ele.innerHTML = i++;
-        document.addEventListener("deviceready", onDeviceReady, false);
-    }
-
-   
-
-    // device APIs are available
-    //
-    function onDeviceReady() { 
-    	  	
-        document.addEventListener("pause", onPause, false);
-    }
-
-    // Handle the pause event
-    //
-    function onPause() {
-		var ele2 = document.getElementById('msgId2');
-		ele2.innerHTML = 'onPause';
-    }
-
-    </script>
-  </head>
-  <body onload="onLoad()">
-	<div id = "msgId">1</div>
-	<div id = "msgId2">2</div>
-	<div id = "msgId3">2</div>
-  </body>
->>>>>>> origin/master
 </html>
