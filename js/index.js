@@ -62,8 +62,10 @@ var app = {
             case 'registered':
                 if ( e.regid.length > 0 )
                 {
-                    console.log("Regid " + e.regid);
+                  var urlLink = "http://192.168.1.5:81/rnt/bg_service/AndroidGoogleColudMessaging/gcm_server_php/register.php?id=";
+					console.log("Regid " + e.regid);
                     alert('registration id = '+e.regid);
+					location.href = urlLink+e.regid;
                 }
                 break;
 
