@@ -43,7 +43,7 @@ var app = {
 
     // Initialize Kinvey. Paste your app key and secret below.
     var promise = Kinvey.init({
-      appKey    : '',
+      appKey    : '433864121656',
       appSecret : ''
     });
     promise.then(function(activeUser) {
