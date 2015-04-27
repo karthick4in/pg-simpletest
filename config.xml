@@ -69,3 +69,4 @@
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
 </widget>
+    If you do not want any permissions to be added to your app, add the
