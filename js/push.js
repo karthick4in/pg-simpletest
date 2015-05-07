@@ -53,7 +53,7 @@ var push = {
     if('android' === device.platform.toLowerCase()) {// Android.
       pushNotification.register(push.successHandler, push.errorHandler, {
         ecb      : 'push.onNotificationGCM',
-        senderID : 'Project ID'// Google Project ID.
+        senderID : '433864121656'// Google Project ID.
       });
     }
     else {// iOS.
