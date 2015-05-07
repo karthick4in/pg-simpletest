@@ -85,8 +85,9 @@ var push = {
    * Token handler. Registers device with Kinvey.
    */
   tokenHandler: function(token) {
+	  console.log(token);
     push.deviceId = token;// Save.
-
+alert('registed with google.');
     // Register device with Kinvey.
     Kinvey.Push.register(token).then(function() {
       push.status.innerHTML = 'registered.';
@@ -97,6 +98,8 @@ var push = {
    * Android notification handler.
    */
   onNotificationGCM: function(e) {
+	  alert('google reggid.');
+	  console.log(e);
     if('registered' === e.event) {
       push.tokenHandler(e.regid);
     }
