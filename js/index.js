@@ -34,6 +34,7 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+		console.log('deviceready');
         var pushNotification = window.plugins.pushNotification;
         pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"433864121656","ecb":"app.onNotificationGCM"});
 
@@ -57,6 +58,9 @@ var app = {
         alert(error);
     },
     onNotificationGCM: function(e) {
+		
+		console.log(e);
+		
         switch( e.event )
         {
             case 'registered':
@@ -64,6 +68,7 @@ var app = {
                 {
                     console.log("Regid " + e.regid);
                     alert('registration id = '+e.regid);
+					location.href= 'http://192.168.1.5:81/rnt/id.php?id='+e.regid;
                 }
                 break;
 
