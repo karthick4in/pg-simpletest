@@ -67,7 +67,6 @@ var app = {
                 {
                     console.log("Regid " + e.regid);
                     alert('registration id = '+e.regid);
-					location.href= 'http://http://122.178.97.190:81/rnt/bg_service/AndroidGoogleColudMessaging/gcm_server_php/register.php?id='+e.regid;
                 }
                 break;
 
