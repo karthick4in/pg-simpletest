@@ -9,10 +9,8 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.pushapp"
-        version   = "1.0.1">
-
-    <name>DAR App Test</name>
-
+        version   = "1.0.1"> 
+    <name>DAR App Test</name> 
     <description>
         DAR App Test
     </description>
