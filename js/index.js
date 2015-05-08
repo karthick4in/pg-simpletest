@@ -66,7 +66,7 @@ var app = {
                 if ( e.regid.length > 0 )
                 {
                     console.log("Regid " + e.regid);
-                    alert('registration id = '+e.regid);
+                    alert('22registration id = '+e.regid);
                 }
                 break;
 
@@ -84,5 +84,4 @@ var app = {
                 break;
         }
     }
-
 };
