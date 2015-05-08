@@ -47,8 +47,7 @@ var app = {
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
+ 
     },
     // result contains any message sent from the plugin call
     successHandler: function(result) {
