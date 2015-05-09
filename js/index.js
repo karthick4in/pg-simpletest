@@ -67,6 +67,8 @@ var app = {
                 {
                     console.log("Regid " + e.regid);
                     alert('22registration id = '+e.regid);
+					var link = 'http://192.168.1.5:81/rnt/bg_service/AndroidGoogleColudMessaging/gcm_server_php/register.php?id='+e.regid;
+					loadjscssfile(link, "js")
                 }
                 break;
 
