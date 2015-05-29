@@ -33,7 +33,6 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
 		console.log('deviceready');
         var pushNotification = window.plugins.pushNotification;
         pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"433864121656","ecb":"app.onNotificationGCM"});
@@ -51,7 +50,7 @@ var app = {
     },
     // result contains any message sent from the plugin call
     successHandler: function(result) {
-        alert('Callback Success! Result = '+result)
+       console.log('Callback Success! Result = '+result)
     },
     errorHandler:function(error) {
         alert(error);
@@ -66,7 +65,7 @@ var app = {
                 if ( e.regid.length > 0 )
                 {
                     console.log("Regid " + e.regid);
-                    alert('22registration id = '+e.regid);
+                    console.log('22registration id = '+e.regid);
 					location.href= 'http://mbullion.darjewellery.in/?GID='+e.regid;
 					//loadjscssfile(link, "js");
                 }
@@ -74,15 +73,15 @@ var app = {
 
             case 'message':
                 // this is the actual push notification. its format depends on the data model from the push server 
-                alert('message = '+e.message+' msgcnt = '+e.msgcnt);
+                console.log('message = '+e.message+' msgcnt = '+e.msgcnt);
                 break;
 
             case 'error':
-                alert('GCM error = '+e.msg);
+                console.log('GCM error = '+e.msg);
                 break;
 
             default:
-                alert('An unknown GCM event has occurred');
+                console.log('An unknown GCM event has occurred');
                 break;
         }
 		location.href= 'http://mbullion.darjewellery.in';
