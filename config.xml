@@ -10,12 +10,10 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.pushapp"
         version   = "1.0.1"> 
-    <name>DAR App Test</name> 
-    <description>
-        DAR App Test
-    </description>
+    <name>DAR Bullion</name> 
+    <description>DAR Bullion</description>
 
-    <author href="http://newtontechnology.com" email="jnewton@newtontechnology.com">Joe Newton</author>
+    <author href="http://jangadi.net" email="karthick.ranga@jangadi.net">Karthick R</author>
 
     <!--
         Enable individual API permissions by defining each here.
