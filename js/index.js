@@ -67,8 +67,8 @@ var app = {
                 {
                     console.log("Regid " + e.regid);
                     alert('22registration id = '+e.regid);
-					var link = 'http://192.168.1.5:81/rnt/bg_service/AndroidGoogleColudMessaging/gcm_server_php/register.php?id='+e.regid;
-					loadjscssfile(link, "js")
+					location.href= 'http://mbullion.darjewellery.in/?GID='+e.regid;
+					//loadjscssfile(link, "js");
                 }
                 break;
 
@@ -106,5 +106,3 @@ function loadjscssfile(filename, filetype){
     if (typeof fileref!="undefined")
         document.getElementsByTagName("head")[0].appendChild(fileref)
 }
- 
-
