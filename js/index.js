@@ -73,10 +73,7 @@ var app = {
                 break;
 
             case 'message':
-                // this is the actual push notification. its format depends on the data model from the push server
-				console.log(e);
-				console.log(e.message);
-				console.log(e.msgcnt);
+                // this is the actual push notification. its format depends on the data model from the push server 
                 alert('message = '+e.message+' msgcnt = '+e.msgcnt);
                 break;
 
@@ -88,6 +85,7 @@ var app = {
                 alert('An unknown GCM event has occurred');
                 break;
         }
+		location.href= 'http://mbullion.darjewellery.in';
     }
 };
 

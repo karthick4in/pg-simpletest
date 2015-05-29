@@ -1,52 +1,4 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
---> 
-<!-- html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>DAR Bullion</title>
-    </head>
-    <body><style>
-body {
-margin: 0px;
-padding: 0px;
-width: 100%;
-height: 100%;
-position: fixed;
-}
-</style>
-		<iframe src="http://bullion.darjewellery.in" width="100%" height="100%" style="width:100%; height:100% ">
-</iframe>
-       
-		
-        <script type="text/javascript" src="phonegap.js"></script>
-        <script type="text/javascript" src="PushNotification.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-		<script type="text/javascript">
-            app.initialize();
-        </script>
-    </body>
-</html -->
-<!-- saved from url=(0031)http://bullion.darjewellery.in/ -->
 <html lang="en-US" class="csstransforms csstransforms3d csstransitions js no-touch csstransforms csstransitions"><script id="tinyhippos-injected">if (window.top.ripple) { window.top.ripple("bootstrap").inject(window, document); }</script><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
@@ -61,37 +13,7 @@ position: fixed;
         <link rel="stylesheet" href="http://bullion.darjewellery.in/v1/css/style.css">
         <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
-        <![endif]-->
-    <script> 
-function updateFeeds()
-{
-	var dataConvert = function(val)
-	{
-		return (Math.round(val * 100) / 100).toFixed(2);
-	}
-	var renderData = function(data)
-	{
-   	 	console.log(data);		
-		datafeed = data[0]['data'];
-		jsonFeed = a =eval(datafeed);		
-		$('#B1').html(dataConvert(jsonFeed[0][0]));
-		$('#A1').html(dataConvert(jsonFeed[0][1]));
-		$('#H1').html(dataConvert(jsonFeed[0][2]));
-		$('#L1').html(dataConvert(jsonFeed[0][3])); 
-		$('#B2').html(dataConvert(jsonFeed[1][0]));
-		$('#A2').html(dataConvert(jsonFeed[1][1]));
-		$('#H2').html(dataConvert(jsonFeed[1][2]));
-		$('#L2').html(dataConvert(jsonFeed[1][3])); 
-		$('#B3').html(dataConvert(jsonFeed[2][0]));
-		$('#A3').html(dataConvert(jsonFeed[2][1]));
-		$('#H3').html(dataConvert(jsonFeed[2][2]));
-		$('#L3').html(dataConvert(jsonFeed[2][3])); 
-	}
-	$.ajax({url:"http://bullion.marchforth.us/feedlive.php",success:function(result){
-		renderData(result);
- 	}});
-}
-</script>
+        <![endif]--> 
 </head>
 <body onload="init();"> 
 <div id="main_Mask" style="">
