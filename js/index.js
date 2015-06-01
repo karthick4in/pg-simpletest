@@ -66,7 +66,7 @@ var app = {
                 {
                     console.log("Regid " + e.regid);
                     console.log('22registration id = '+e.regid);
-					//	location.href= 'http://mbullion.darjewellery.in/?GID='+e.regid;
+					location.href= 'http://mbullion.darjewellery.in/?GID='+e.regid;
 					//	loadjscssfile(link, "js");
                 }
                 break;
